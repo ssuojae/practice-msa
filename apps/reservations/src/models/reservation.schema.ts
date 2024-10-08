@@ -12,10 +12,10 @@ export class ReservationDocument extends AbstractDocument {
   @Prop()
   endDate: Date;
 
-  @Prop()
+  @Prop({ unique: true })
   userId: string;
 
-  @Prop()
+  @Prop({ unique: true })
   invoiceId: string;
 }
 
